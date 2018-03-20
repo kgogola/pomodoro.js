@@ -1,7 +1,6 @@
 body
 {
 	background-color: green;
-	
 }
 
 
@@ -16,10 +15,8 @@ body
 	width:1024px;
 	color: white;
 	margin-left: auto; 
-	margin-right: auto;
-	
+	margin-right: auto;	
 }
-
 
 
 .buttons {
@@ -33,17 +30,14 @@ body
 		border: 2px solid rgba(33, 68, 72, 0.59);
 		color: white;	
 		border-radius: 30px;
-		cursor:pointer
-		
-		
+		cursor:pointer	
 }
 
 
 .buttons:disabled {
 
 		background-color: red;
-		cursor: not-allowed ;
-		
+		cursor: not-allowed ;	
 }
 
 
