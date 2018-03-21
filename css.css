@@ -3,7 +3,6 @@ body
 	background-color: green;
 }
 
-
 .elements 
 {
 	height:200px;
@@ -18,7 +17,6 @@ body
 	margin-right: auto;	
 }
 
-
 .buttons {
         width: 200px;
         padding: 10px 20px;
@@ -32,7 +30,6 @@ body
 		border-radius: 30px;
 		cursor:pointer	
 }
-
 
 .buttons:disabled {
 
