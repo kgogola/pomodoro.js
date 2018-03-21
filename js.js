@@ -1,94 +1,73 @@
-	let time = {
+let time = {
 	minutes:0,
-	seconds:15,	
-				};
+	seconds:15
+};
 
-	let t; // i will put setTimeout function here 
-	let oneSec=1000;	
+let t;
+let oneSec=1000;
 
-window.onload = function()
-{
+window.onload = function() {
 	document.querySelector("#stop").disabled = true;
-	clock(0);	
+	clock(0);
 }
 
-function clock(period) 
-{
-	if(time.seconds<0 && time.minutes>0)
-		{
-			time.seconds =59;
-			time.minutes--;
-		}
 
-	if(time.seconds==0 && time.minutes==0)
-		{
-			alert("FINISHED!!!!");
-			stopB();	
-		}
-	
-	if(time.minutes<10)minutes.innerHTML="0"+time.minutes;
-	else minE.innerHTML=minutes.minutes;
-	if(time.seconds<10)seconds.innerHTML="0"+time.seconds;
-	else seconds.innerHTML=time.seconds;
-	
+function clock(period) {
+	if(time.seconds==0 && time.minutes==0){
+		alert("Finished!!!");
+		stopB();
+	}
+	if(time.seconds<0 && time.minutes>0){
+		time.seconds = 59;
+		time.minutes--;
+	}
+	if(time.minutes<10) {
+		minutes.innerHTML = "0"+time.minutes;
+	}
+	else {
+		minE.innerHTML = minutes.minutes;
+	}
+	if(time.seconds<10) {
+		second.innerHTM L ="0"+time.seconds;
+	}
+	else {
+		seconds.innerHTM L = time.seconds;
+	}
+
 	time.seconds--;
 
-	
-	if(period!=0)t=setTimeout("clock(oneSec)", period); //i did it to display primary time
+	if(period!=0) {
+		t = setTimeout("clock(oneSec)",period); //to display primary time
+	}
 }
-	
-	
-function stopClock() 
-{
+
+
+function stopClock() {
 	clearTimeout(t);
 }
 
 
-function startB()
-{
+function startB() {
 	document.querySelector("#stop").disabled = false;
 
-	if(start.innerHTML=="START")
-	{
+	if(start.innerHTML=="START") {
 		clock(1000);
-		start.innerHTML="PAUSE";	
+		start.innerHTM = "PAUSE";
 		let x = document.querySelector("#stop");
-		x.innerHTML="STOP";
+		x.innerHTML = "STOP";
 	}
-
-	else
-	{
+	else {
 		stopClock();
-		start.innerHTML="START";
+		startB.innerHTML = "START";
 		let x = document.querySelector("#stop");
-		x.innerHTML="DONE";	
+		x.innerHTML = "DONE";
 	}
-
-
 }
 
-function stopB()
-{
+
+function stopB() {
 	location.reload();
 }
-
-
-
-
-
-
-
-
-
-//MY QUESTION:
-//It is good custom to add function as a "on click" atribute in HTML ???
-
-
-
-
-
-
-
 
 
 
